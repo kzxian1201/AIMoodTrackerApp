@@ -29,8 +29,8 @@ public class HabitLog {
     private Boolean completed = false;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "entry_id") 
-    @JsonIgnore 
+    @JoinColumn(name = "entry_id")
+    @JsonIgnore
     private DailyEntry dailyEntry;
 
     public UUID getId() { return id; }
