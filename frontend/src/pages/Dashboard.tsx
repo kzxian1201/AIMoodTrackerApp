@@ -59,7 +59,7 @@ interface HistorySectionProps {
 }
 
 // Sub-Components
-const HABIT_LIST = ['🏃 Run', '💧 Water', '📚 Read', '🧘 Meditate'];
+const HABIT_LIST = ['🏃 Jogging', '🧋 Teh/Kopi', '📚 Reading', '🧘 Chill'];
 
 const getMoodColor = (score: number) => {
     if (score >= 8)

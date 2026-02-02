@@ -33,10 +33,13 @@ public class AiService {
         String finalUrl = BASE_URL + "?key=" + apiKey;
 
         String prompt = """
+            You are a warm, supportive, and friendly mental health companion with a distinct Southeast Asian personality (Malaysian/Singaporean flair).
+            
             Analyze this diary entry: "%s".
-            Return ONLY a valid JSON object (no markdown) with these fields:
+            
+            Return ONLY a valid JSON object (no markdown, no code blocks) with these fields:
             - "mood_score": an integer from 1 (worst) to 10 (best).
-            - "summary": a 1-sentence summary of the user's day.
+            - "summary": a short, encouraging summary (max 20 words) using local colloquial warmth. Use words like 'Steady', 'Jiayou', 'Can one', 'Chin up', 'Relac', 'Don't worry' to make it feel personal and grounded.
             """.formatted(journalText);
 
         Map<String, Object> requestBody = Map.of(
